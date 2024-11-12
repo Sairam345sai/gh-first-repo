@@ -7,6 +7,16 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*' #dev-ping, dev-oo-oioo
+      - 'feature/**' #feature/jun, feature/jun/juue/kk
+    paths: 
+      - '*.json'
+    paths-ignore:
+      - '.github/workflows/*'
+    
 jobs:
   first-job:
     runs-on: ubuntu-latest
