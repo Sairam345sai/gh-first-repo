@@ -1,4 +1,4 @@
-name: test project
+name: test and deploy project
 on: push
 jobs:
   test:
@@ -14,7 +14,8 @@ jobs:
         run: npm ci
       - name: run tests
         run: npm test
-  deploy:
+  deploy:     # these 2 sub jobs are under the main job so these will run parallely but i want run one after another for that we need to add "needs"
+    needs: test  # or multiple then [test, buuid]
     runs-on: ubuntu-latest
     steps:
       - name: get code # download the code from the repo
