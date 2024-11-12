@@ -1,0 +1,16 @@
+name: test project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code # download the code from the repo
+        uses: actions/checkout@v4 # if some actions requered additional data for that we need to use "with" keyword
+      - name: install nodejs # ruuners comes with software and packages but you want to install then
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: install dependencies
+        run: npm ci
+      - name: run tests
+        run: npm test
