@@ -1,6 +1,6 @@
 name: eventaction
 #when this work flow should be executed
-#on: workflow_dispatch #manually triggered
+#on: workflow_dispatch #manually triggered.
 #what should be done
 on:
   pull_request:
