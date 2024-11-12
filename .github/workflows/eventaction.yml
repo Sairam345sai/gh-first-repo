@@ -12,8 +12,8 @@ on:
       - main
       - 'dev-*' #dev-ping, dev-oo-oioo
       - 'feature/**' #feature/jun, feature/jun/juue/kkh
-    paths: 
-      - '*.json'
+    #paths: 
+    #  - '*.json' # we need to define either paths or paths-ignote
     paths-ignore:
       - '.github/workflows/*'
     
